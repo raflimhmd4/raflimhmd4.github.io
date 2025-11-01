@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio - Rafli Muhamad</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0d0d0d;
+        color: #e5e5e5;
+        scroll-behavior: smooth;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+      }
+      nav a {
+        color: #e5e5e5;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        color: #00c8ff;
+      }
+
+      section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 1.2rem;
+        opacity: 0.7;
+      }
+
+      .projects {
+        width: 80%;
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .card {
+        padding: 20px;
+        background: #1a1a1a;
+        border-radius: 10px;
+        transition: transform 0.3s, border 0.3s;
+        border: 1px solid #222;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        border: 1px solid #00c8ff;
+      }
+
+      footer {
+        padding: 20px;
+        text-align: center;
+        background: #111;
+        font-size: 0.9rem;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="about.html" target="_blank">About</a>
+      <a href="project.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <section id="home" class="hero">
+      <h1>Halo, Saya Rafli Muhamad 👋</h1>
+      <p>Front-End Developer | UI/UX Enthusiast</p>
+    </section>
+
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p
+        style="
+          max-width: 600px;
+          text-align: center;
+          margin-top: 20px;
+          opacity: 0.7;
+        "
+      >
+        Saya seorang developer yang suka membangun tampilan website modern dan
+        clean, fokus pada pengalaman pengguna dan desain minimalis.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Project Saya</h2>
+      <div class="projects">
+        <div class="card">Project 1</div>
+        <div class="card">Project 2</div>
+        <div class="card">Project 3</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Hubungi Saya</h2>
+      <p style="opacity: 0.7; margin-top: 20px">Email / Instagram / GitHub</p>
+    </section>
+
+    <footer>© 2025 - Dibuat oleh Rafli Muhamad</footer>
+  </body>
+</html>

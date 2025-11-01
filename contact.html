@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0d0d0d;
+        color: #e5e5e5;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+      }
+      nav a {
+        color: #e5e5e5;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        color: #00c8ff;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 120px 20px 60px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      p {
+        text-align: center;
+        opacity: 0.8;
+        margin-bottom: 40px;
+      }
+
+      form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      textarea {
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #333;
+        background: #1a1a1a;
+        color: #e5e5e5;
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 12px;
+        border: none;
+        background: #00c8ff;
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+
+      .social {
+        text-align: center;
+        margin-top: 40px;
+      }
+      .social a {
+        color: #00c8ff;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+        transition: 0.3s;
+      }
+      .social a:hover {
+        opacity: 0.6;
+      }
+
+      footer {
+        padding: 20px;
+        text-align: center;
+        background: #111;
+        font-size: 0.9rem;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+      <h1>Hubungi Saya</h1>
+      <p>
+        Kirim pesan melalui form di bawah atau kontak saya melalui sosial media
+        😊
+      </p>
+
+      <form action="" onsubmit="sendMessage(); return false;">
+        <input type="text" id="name" placeholder="Nama Kamu" required />
+        <input type="email" id="email" placeholder="Email Kamu" required />
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Tulis pesanmu..."
+          required
+        ></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+
+      <div class="social">
+        <p>Atau hubungi saya lewat:</p>
+        <a href="https://wa.me/62XXXXXXXXXX" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/raflimhmd4_" target="_blank"
+          >Instagram</a
+        >
+        <a href="https://github.com/username" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <footer>© 2025 - Dibuat oleh Rafli Muhamad</footer>
+
+    <script>
+      function sendMessage() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        const url = `https://wa.me/62XXXXXXXXXX?text=Halo,%20saya%20${name}%20(${email}).%0A%0A${message}`;
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
+</html>
